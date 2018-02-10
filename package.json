@@ -1,0 +1,21 @@
+{
+  "name": "node-translate",
+  "version": "1.0.1",
+  "description": "A translater written by nodejs.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "translate"
+  ],
+  "author": "shuang6",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shuang6/node-translate.git"
+  },
+  "license": "MIT"
+}
