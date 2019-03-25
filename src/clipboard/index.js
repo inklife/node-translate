@@ -1,7 +1,17 @@
-const path = require('path')
 const { exec } = require('child_process')
+const os = require('os')
+const type = os.type().toLocaleLowerCase()
 
-const clipboard = path.join(__dirname, '../../lib/clipboard/clipboard.exe')
+let clipboard = ''
+
+if (type === 'windows_nt') {
+  clipboard = 'powershell clipboard'
+} else if (type === 'darwin') {
+ clipboard = 'pbpaste'
+} else {
+  throw new Error('For the time being, only Windows and MacOS are supported.')
+}
+
 /**
  * @returns {Promise<{code: Number, data: String}>} Text of clipboard
  */
